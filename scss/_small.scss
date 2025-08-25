@@ -1,0 +1,96 @@
+/* Prevent adjustments of font size after orientation changes. */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    height: 100%;
+    /*moz and webkit are two different kinds of browsers. This is for older devices specifically.*/
+}
+
+/*----------- Apply a natural box layout model to all elements -----------*/
+* {
+    -moz-box-sizing: border-box;
+    /*border-box: padding is inside, margin is outside.*/
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    font-family: $defaultFont;
+    font-weight: $medWeight;
+    color: $fontColor;
+}
+
+#headerWrapper {
+    background-color: $pColor;
+    color: white;
+}
+
+header {
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem $gutter;
+    gap: 16px;
+    
+
+    h1 {
+        margin: 0;
+        font-size: 1.2rem;
+        font-weight: $medWeight;
+    }
+}
+
+#navWrapper {
+    background-color: $sColor;
+}
+
+nav {
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+
+        li {
+            flex: 1;
+        }
+    }
+
+    li.active {
+        background-color: $tColor;
+        color: $pColor;
+    }
+
+    a {
+        display: block;
+        padding: 0.75rem;
+        color: $fontColor;
+        text-align: center;
+        text-decoration: none;
+
+        &:hover {
+            color: $pColor
+        }
+    }
+}
+
+#mainWrapper {
+    padding: 0 $gutter;
+}
+
+// Begin the footer. 
+
+#footerWrapper {
+    background-color: $pColor;
+}
+footer {
+    padding: 0.5rem $gutter;
+    width: 100;
+    p {
+        margin: 0;
+        font-weight: $lightWeight;
+        text-align: center;
+        color: $bgColor
+    }
+}
