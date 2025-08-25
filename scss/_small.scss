@@ -82,7 +82,7 @@ nav {
 // Begin the footer. 
 
 #footerWrapper {
-    background-color: $pColor;
+    background-color: #1D4944;
 }
 footer {
     padding: 0.5rem $gutter;
@@ -91,6 +91,6 @@ footer {
         margin: 0;
         font-weight: $medWeight;
         text-align: center;
-        color: $bgColor
+        color: $bgColor;
     }
 }
